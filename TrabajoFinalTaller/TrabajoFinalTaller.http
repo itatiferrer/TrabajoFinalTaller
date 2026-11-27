@@ -1,0 +1,85 @@
+@TrabajoFinalTaller_HostAddress = http://localhost:5280
+
+GET {{TrabajoFinalTaller_HostAddress}}/api/v1/regions/3966
+Accept: application/json
+
+###
+
+GET {{TrabajoFinalTaller_HostAddress}}/api/v1/regions
+Accept: application/json
+###
+
+PUT {{TrabajoFinalTaller_HostAddress}}/api/v1/regions/3966
+Content-Type: application/json
+Accept: application/json
+
+{
+    "countryId": 1,
+    "code": "TEST003",
+    "localCode": "T3",
+    "name": "Region modificada",
+    "keywords": "modificada",
+    "wikipediaLink": null
+}
+###
+DELETE {{TrabajoFinalTaller_HostAddress}}/api/v1/regions/3966
+Accept: application/json
+###
+# LISTAR AVIONES
+GET {{TrabajoFinalTaller_HostAddress}}/api/v1/aircrafts
+Accept: application/json
+###
+# CREAR AVION
+POST {{TrabajoFinalTaller_HostAddress}}/api/v1/aircrafts
+Content-Type: application/json
+Accept: application/json
+
+{
+  "iatacode": "TEST",
+  "name": "Avion de prueba"
+}
+###
+# MODIFICAR AVION
+PUT {{TrabajoFinalTaller_HostAddress}}/api/v1/aircrafts/588
+Content-Type: application/json
+Accept: application/json
+
+{
+  "iatacode": "TEST2",
+  "name": "Avion modificado"
+}
+###
+# ELIMINAR AVION
+DELETE {{TrabajoFinalTaller_HostAddress}}/api/v1/aircrafts/588
+Accept: application/json
+### OBTENER AEROPUERTO POR ID
+GET {{TrabajoFinalTaller_HostAddress}}/api/v1/airports/1
+Accept: application/json
+### MODIFICAR AEROPUERTO
+PUT {{TrabajoFinalTaller_HostAddress}}/api/v1/airports/1
+Content-Type: application/json
+Accept: application/json
+
+{
+    "airportCode": "TEST01",
+    "name": "Aeropuerto de prueba modificado",
+    "city": "Cordoba",
+    "municipality": "Cordoba"
+}
+###
+# OBTENER AEROPUERTO POR ID
+GET {{TrabajoFinalTaller_HostAddress}}/api/v1/airports/1
+Accept: application/json
+### ELIMINAR AEROPUERTO
+DELETE {{TrabajoFinalTaller_HostAddress}}/api/v1/airports/1
+Accept: application/json
+
+PUT https://localhost:7244/api/v1/airports/1
+Content-Type: application/json
+
+{
+  "airportCode": "TEST",
+  "name": "Aeropuerto de prueba",
+  "city": "Cordoba",
+  "municipality": "Cordoba"
+}
